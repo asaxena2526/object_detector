@@ -44,4 +44,4 @@ class PythonPredictor:
         predicted_t = predicted_t[-1]
         predicted_boxes = predicted_boxes[: predicted_t + 1]
         predicted_class = predicted_class[: predicted_t + 1]
-        return predicted_boxes, predicted_class
+        return {"box":predicted_boxes, "class":predicted_class}
